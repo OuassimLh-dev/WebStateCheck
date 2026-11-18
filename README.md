@@ -66,3 +66,7 @@ The protocol for a blinded multi-target comparison, independent behavioral oracl
 *WebStateCheck: Timing-Aware Test Programs for Asynchronous JavaScript* (Ouassim Lahraoui, 2026), **unpublished independent technical manuscript**. The manuscript is supplied separately from this source distribution.
 
 Public upstream software is credited to its original maintainers. This repository includes original research harnesses, not copied upstream application source trees.
+
+## Technical report
+
+[WebStateCheck: Timing-Aware Test Programs for Asynchronous JavaScript (PDF)](docs/WebStateCheck_Technical_Report_Updated_2026.pdf) — independent unpublished technical report, version 1.1 (19 November 2026), not peer reviewed. For limitations and artifact coverage, see [Public artifact scope](docs/RESEARCH_ARTIFACT_SCOPE.md).
