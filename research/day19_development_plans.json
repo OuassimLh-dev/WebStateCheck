@@ -1,0 +1,14 @@
+{
+  "schema_version": "wsc-timing-dev-v1",
+  "target_id": "t01",
+  "plans": [
+    {"plan_id": "gated-sync", "first_task": "gated", "abort_timing": "in_callback_sync"},
+    {"plan_id": "gated-microtask", "first_task": "gated", "abort_timing": "in_callback_microtask"},
+    {"plan_id": "gated-external", "first_task": "gated", "abort_timing": "after_submit_external"},
+    {"plan_id": "gated-none", "first_task": "gated", "abort_timing": "none"},
+    {"plan_id": "immediate-sync", "first_task": "immediate", "abort_timing": "in_callback_sync"},
+    {"plan_id": "immediate-microtask", "first_task": "immediate", "abort_timing": "in_callback_microtask"},
+    {"plan_id": "immediate-external", "first_task": "immediate", "abort_timing": "after_submit_external"},
+    {"plan_id": "immediate-none", "first_task": "immediate", "abort_timing": "none"}
+  ]
+}

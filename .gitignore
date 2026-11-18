@@ -1,0 +1,32 @@
+# Local Python and JS dependencies
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+node_modules/
+.DS_Store
+.env
+.env.*
+*.log
+
+# Generated outputs, upstream checkouts, and build artifacts
+results/
+dist/
+build/
+**/bundles/
+**/upstream_sources/
+**/worktrees/
+**/node_modules/
+
+# Private study registration and reviewer work-in-progress
+research/holdout_staging/
+research/holdout_sealed/
+research/day24_review/
+research/day11_future_protocol_lock.json
+**/PRIVATE_*
+
+# Generated, unreviewed experiment plans (review separately if ever publishing)
+research/day9_candidates/
+research/day20_candidates/
+research/day22_folds/

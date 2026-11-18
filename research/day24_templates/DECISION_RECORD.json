@@ -1,0 +1,22 @@
+{
+  "record_version": "day24-review-draft-v1",
+  "review_status": "PENDING_EXTERNAL_REVIEW",
+  "independent_target_selection": {
+    "reviewer": null,
+    "dated_approval_evidence": null
+  },
+  "independent_oracle_approval": {
+    "reviewer": null,
+    "dated_approval_evidence": null
+  },
+  "isolated_generation_approval": {
+    "reviewer": null,
+    "dated_approval_evidence": null
+  },
+  "v2_preregistration": {
+    "reviewer": null,
+    "dated_approval_evidence": null,
+    "protocol_sha256": null
+  },
+  "notes": "Evidence fields are human-maintained. No CLI output confers approval or seals a target."
+}

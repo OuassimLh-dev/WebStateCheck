@@ -1,0 +1,9 @@
+{
+  "name": "webstatecheck-final-form-reproduction",
+  "private": true,
+  "version": "0.1.0",
+  "description": "External dependency solely for bundling two pinned upstream revisions",
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

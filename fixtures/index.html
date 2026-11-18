@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebStateCheck Research Fixture</title>
+  <style>
+    body { font: 16px system-ui, -apple-system, sans-serif; max-width: 650px; margin: 50px auto; padding: 0 20px; color: #253047; }
+    input, button { font: inherit; padding: 9px 12px; }
+    input { width: 240px; }
+    button { cursor: pointer; }
+    #status { color: #78500b; min-height: 24px; }
+    #error { color: #9e1d24; min-height: 24px; }
+    #results { border: 1px solid #bcc5d1; background: #f4f6fa; padding: 16px; min-height: 30px; border-radius: 6px; }
+    .hint { font-size: 13px; color: #607089; }
+  </style>
+</head>
+<body>
+  <h1>Search Fixture</h1>
+  <p>This intentionally small web app has a buggy and a corrected implementation.</p>
+  <label for="query">Search query</label>
+  <input id="query" type="text" autocomplete="off" placeholder="old, new, fail, hello">
+  <button id="search" type="button">Search</button>
+  <p id="status" aria-live="polite"></p>
+  <p id="error" role="alert"></p>
+  <section id="results" aria-label="Search results">No search yet.</section>
+  <p class="hint">Try <code>?mode=buggy</code> or <code>?mode=fixed</code>. "old" is intentionally slow, "new" fast, and "fail" returns HTTP 503.</p>
+  <script src="/app.js"></script>
+</body>
+</html>

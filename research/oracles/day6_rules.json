@@ -1,0 +1,97 @@
+{
+  "version": "1.1",
+  "description": "Hand-authored domain invariants. No AI; not learned from the buggy/fixed labels.",
+  "rules": [
+    {
+      "id": "visible_error_must_clear_loading",
+      "source": "browser",
+      "description": "An error is visible after the HTTP response; the loading indicator should be cleared.",
+      "when": [
+        {
+          "field": "error_visible",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "require": [
+        {
+          "field": "loading_visible",
+          "op": "eq",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "successful_search_must_show_latest_result",
+      "source": "browser",
+      "description": "Fixture-specific search oracle: a settled, non-error last query should appear in the result.",
+      "when": [
+        {
+          "field": "network_settled",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "latest_query_is_success",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "error_visible",
+          "op": "eq",
+          "value": false
+        }
+      ],
+      "require": [
+        {
+          "field": "result_matches_latest_query",
+          "op": "eq",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "successful_latest_query_must_clear_prior_error",
+      "source": "browser",
+      "description": "For this search fixture, once the last successful request settles, errors left by previous requests must no longer be shown.",
+      "when": [
+        {
+          "field": "network_settled",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "latest_query_is_success",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "require": [
+        {
+          "field": "error_visible",
+          "op": "eq",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "pending_validation_requires_validating_true",
+      "source": "final_form",
+      "description": "As long as a newer field validator is pending, the field should report validating=true.",
+      "when": [
+        {
+          "field": "newer_validation_pending",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "require": [
+        {
+          "field": "validating",
+          "op": "eq",
+          "value": true
+        }
+      ]
+    }
+  ]
+}
